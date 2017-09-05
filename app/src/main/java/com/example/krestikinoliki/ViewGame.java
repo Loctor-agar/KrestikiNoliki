@@ -9,9 +9,11 @@ class ViewGame {
     public ViewGame(Model model) {
         this.model = model;
     }
-    public int text(int i, int i1) {
-        return 0;
+    public int text(int i, int j) {
+        return model.getResult;
     }
+
+
 
 
 }

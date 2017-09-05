@@ -8,8 +8,8 @@ class ControllerGame {
     boolean gameActive = true;
     private Model model;
     private char xo = 'x';
-    private int[] coords[6];
-
+    private int[][] coords;
+    private Winner winner;
     public ControllerGame(Model model) {
         this.model = model;
     }
@@ -18,14 +18,11 @@ class ControllerGame {
         if(gameActive){
             if(model.isEmpty(i,j)){
                 model.writeTurn(i,j,xo);
-                if (xo=='x'){
-                    xo = 'o';
-                }else{
-                    xo='x';
-                }
-                if(winner.chek()){
-                    coords[] = winner.giveWinnersCoordinats();
-                    model.setWinnerCooordinates(coords[]);
+                if (xo=='x') xo = 'o';
+                else xo='x';
+                if(winner.check(model)){
+                    coords = winner.giveWinnersCoordinats();
+                    model.setWinnerCooordinates(coords, winner.win());
                     gameActive = false;
 
                 }
