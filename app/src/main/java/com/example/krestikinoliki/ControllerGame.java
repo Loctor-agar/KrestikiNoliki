@@ -10,8 +10,10 @@ class ControllerGame {
     private char xo = 'x';
     private int[][] coords;
     private Winner winner;
+
     public ControllerGame(Model model) {
         this.model = model;
+        winner = new Winner();
     }
 
     public void turn(int i, int j) {

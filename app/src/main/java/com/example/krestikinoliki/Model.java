@@ -9,10 +9,19 @@ class Model {
     private char table [][];
     private int[][] winnerCooordinates;
     private boolean tableFull;
-    public int getResult;
 
-    public int getGetResult() {
-        return ;
+    public Model() {
+        table = new char[3][3];
+        for(int i = 0;i < 3;i++){
+            for(int j = 0;j < 3;j++){
+                table [i][j] = 'e';
+            }
+        }
+    }
+
+
+    public char getResult(int i,int j) {
+        return table[i][j];
     }
 
     public char[][] getTable() {
@@ -28,14 +37,7 @@ class Model {
 
     }
 
-    public Model() {
-        table = new char[3][3];
-        for(int i = 0;i < 3;i++){
-            for(int j = 0;j < 3;j++){
-                table [i][j] = 'e';
-            }
-        }
-    }
+
 
     public void writeTurn(int i, int j, char xo) {
         table [i][j] = xo;

@@ -6,11 +6,12 @@ package com.example.krestikinoliki;
 
 class ViewGame {
     private Model model;
+
     public ViewGame(Model model) {
         this.model = model;
     }
-    public int text(int i, int j) {
-        return model.getResult;
+    public String text(int i, int j) {
+        return String.valueOf(model.getResult(i,j));
     }
 
 
